@@ -1,0 +1,41 @@
+Menu
+
+Resume [TODO]
+- id
+- file
+
+about [DONE]
+- id
+- image
+- description
+
+tool [DONE]
+- id
+- name
+- image
+- description
+
+service [DONE]
+#service title
+- id
+- name
+- is activate
+
+#service description
+- id
+- name
+- title_id
+- is activate
+
+
+category_portofolio 
+- id
+- name
+
+Portofolio [TODO]
+- id
+- name
+- category_id
+- description
+- image
+- tools_id
