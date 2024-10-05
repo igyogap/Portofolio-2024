@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+
+.navbar {
+    background-color: #F4F4F5;
+}
+
+.my-timezone {
+    font-size: 11px;
+    flex-direction: column;
+    text-align: left;
+}
+
+.my-address {
+    color: #656565;
+}
+
+
+/* HOME */
+
+.home {
+    display: flex;
+    height: 70vh;
+    align-content: center;
+}
+
+.title {
+    font-size: 42px;
+    font-weight: 500;
+}
+
+.sub-title {
+    color: #656565;
+}
+
+.btn-resume:hover {
+    color: #fff !important;
+    text-decoration: none;
+}
+
+.btn-mywork:hover {
+    color: #656565 !important;
+    text-decoration: none;
+}
+
+.btn-resume {
+    background-color: #656565;
+    color: #F8F8F8;
+    border-radius: 0 !important;
+    width: 144px;
+    text-decoration: none;
+    margin: 5px;
+    pointer-events: stroke;
+}
+
+.btn-mywork {
+    background-color: none;
+    color: #656565;
+    border: 2px solid #656565;
+    border-radius: 0 !important;
+    width: 144px;
+    margin: 5px;
+}
+
+
+/* ABOUT */
+
+.section-about {
+    background-color: #F4F4F5;
+}
+
+.section-about img {
+    max-width: 305px;
+    height: auto;
+}
+
+
+/* Small devices (landscape phones, less than 768px) */
+
+@media (max-width: 767.98px) {
+    .navbar {
+        text-align: center;
+    }
+    .my-timezone {
+        justify-content: center;
+        text-align: center;
+    }
+    /* HOME */
+    .home {
+        align-content: center;
+        justify-content: center;
+    }
+    .title {
+        font-size: 28px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .sub-title {
+        text-align: center;
+    }
+    .button-home {
+        display: flex;
+        justify-content: center;
+    }
+    /* ABout */
+    .photo-profile {
+        padding: 3rem !important;
+    }
+    .about-description {
+        padding: 0rem 3rem !important;
+    }
+}
+
+
+/* Medium devices (tablets, less than 992px) */
+
+@media (max-width: 991.98px) {
+    .navbar {
+        text-align: center;
+    }
+    .my-timezone {
+        justify-content: center;
+    }
+    .title {
+        font-size: 27px;
+    }
+    .sub-title {
+        font-size: 11px;
+    }
+    .home {
+        height: 50vh;
+    }
+}

@@ -27,8 +27,7 @@ class AboutResource extends Resource
                     ->image()
                     ->required(),
                 Forms\Components\TextArea::make('description')
-                    ->required()
-                    ->maxLength(255),
+                    ->required(),
             ]);
     }
 

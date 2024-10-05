@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  font-family: Poppins;
+}
+
+.navbar {
+  background-color: #F8F8F8;
+}
+.navbar .nav-timezone {
+  font-size: 0.8em;
+  flex-direction: column;
+  text-align: left;
+}
+.navbar .nav-item-address {
+  color: #656565;
+}
+
+.home {
+  display: flex;
+  height: 70vh;
+  align-content: center;
+}
+.home .home-header {
+  font-size: 2.8em;
+  font-weight: 500;
+}
+.home .home-description {
+  font-size: 0.9em;
+  color: #656565;
+}
+.home .home-button-resume {
+  margin: 5px;
+  width: 144px;
+  font-size: 1.1em;
+  background-color: #656565;
+  color: #F8F8F8;
+  border-radius: 0;
+}
+.home .home-button-mywork {
+  margin: 5px;
+  width: 144px;
+  font-size: 1.1em;
+  background-color: #F8F8F8;
+  color: #656565;
+  border-radius: 0;
+  border: 2px solid #656565;
+}
+
+.about {
+  background-color: #F4F4F5;
+}
+.about .about-title-skill {
+  margin: 1em 0 0.7em 0;
+}
+.about .about-profile img {
+  max-width: 30em;
+  height: auto;
+}
+.about .about-description {
+  font-size: 1.2em;
+}
+.about .about-skill .odd {
+  background-color: #F8F8F8;
+  width: 149px;
+  height: 149px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.about .about-skill .odd img {
+  max-width: 62px;
+}
+.about .about-skill .even {
+  width: 149px;
+  height: 149px;
+}
+.about .about-skill .even img {
+  max-width: 62px;
+}
+.about .about-skill .odd:hover img {
+  transform: scale(1.2);
+}
+.about .about-skill .even:hover img {
+  transform: scale(1.2);
+}
+.about .modal img {
+  width: 1em;
+}
+
+.service .card {
+  border: 0;
+  height: 10rem;
+}
+
+.portofolio .portofolio-img {
+  width: 100%;
+}
+
+@media (max-width: 991.98px) {
+  .navbar {
+    text-align: center !important;
+  }
+  .navbar .navbar-brand {
+    margin: 0 !important;
+  }
+  .navbar .nav-timezone {
+    text-align: center !important;
+    font-size: 0.8em !important;
+  }
+  .home {
+    height: 30vh;
+  }
+  .home .home-header {
+    font-size: 1.7em;
+    font-weight: 500;
+    margin-bottom: 0.6em;
+  }
+  .home .home-description {
+    font-size: 0.7em;
+    color: #656565;
+  }
+  .home .home-button-resume {
+    margin: 5px;
+    width: 120px;
+    font-size: 0.8em;
+    background-color: #656565;
+    color: #F8F8F8;
+    border-radius: 0;
+  }
+  .home .home-button-mywork {
+    margin: 5px;
+    width: 120px;
+    font-size: 0.8em;
+    background-color: #F8F8F8;
+    color: #656565;
+    border-radius: 0;
+    border: 2px solid #656565;
+  }
+  .about {
+    font-size: 1.3em;
+  }
+  .about .about-profile img {
+    max-width: 14em;
+    height: auto;
+    margin-left: 0 !important;
+  }
+  .about .about-title {
+    padding-top: 1.7em;
+  }
+  .about .about-description {
+    font-size: 0.9em;
+  }
+  .about .about-skill .odd {
+    background-color: #F8F8F8;
+    width: 85px;
+    height: 85px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  }
+  .about .about-skill .odd img {
+    max-width: 40px;
+  }
+  .about .about-skill .even {
+    width: 85px;
+    height: 85px;
+  }
+  .about .about-skill .even img {
+    max-width: 40px;
+  }
+  .service .card {
+    height: 13rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .navbar {
+    text-align: center !important;
+  }
+  .navbar .navbar-brand {
+    margin: 0 !important;
+  }
+  .navbar .nav-timezone {
+    text-align: center !important;
+  }
+  .home {
+    height: 65vh !important;
+    text-align: center;
+  }
+  .home .home-header {
+    font-size: 2em;
+    font-weight: 500;
+    margin-bottom: 0.6em;
+  }
+  .home .home-description {
+    margin-bottom: 0.6em;
+  }
+  .home .home-button-resume {
+    margin: 5px;
+    width: 100px;
+    font-size: 0.7em;
+    background-color: #656565;
+    color: #F8F8F8;
+    border-radius: 0;
+  }
+  .home .home-button-mywork {
+    margin: 5px;
+    width: 100px;
+    font-size: 0.7em;
+    background-color: #F8F8F8;
+    color: #656565;
+    border-radius: 0;
+    border: 2px solid #656565;
+  }
+  .about .about-description {
+    text-align: center;
+  }
+  .about .about-profile {
+    display: flex;
+    justify-content: center;
+  }
+  .about .about-profile img {
+    margin-left: 3rem !important;
+  }
+  .about .about-title {
+    padding-top: 0;
+  }
+  .about .about-skill .odd {
+    background-color: #F8F8F8;
+    width: 120px;
+    height: 120px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  }
+  .about .about-skill .odd img {
+    max-width: 40px;
+  }
+  .about .about-skill .even {
+    width: 120px;
+    height: 120px;
+  }
+  .about .about-skill .even img {
+    max-width: 40px;
+  }
+  .about .about-skill .last {
+    order: 6;
+  }
+  .service .card {
+    height: auto;
+  }
+}/*# sourceMappingURL=main.css.map */

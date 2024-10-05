@@ -1,0 +1,261 @@
+@use "./mixin";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+$primary-color: #F4F4F5;
+$secondary-color: #656565;
+$tertiary-color:#F8F8F8;
+// DESKTOP
+* {
+    font-family: Poppins;
+}
+
+// NAVBAR
+.navbar {
+    background-color: $tertiary-color;
+    .nav-timezone {
+        font-size: 0.8em;
+        flex-direction: column;
+        text-align: left;
+    }
+    .nav-item-address {
+        color: $secondary-color;
+    }
+}
+
+// HOME
+.home {
+    display: flex;
+    height: 70vh;
+    align-content: center;
+    .home-header {
+        @include mixin.title(2.8em,
+        500);
+    }
+    .home-description {
+        @include mixin.description(0.9em,
+        $secondary-color)
+    }
+    .home-button-resume {
+        @include mixin.button('block',
+        144px,
+        1.1em);
+    }
+    .home-button-mywork {
+        @include mixin.button('inline',
+        144px,
+        1.1em);
+    }
+}
+
+// ABOUT
+.about {
+    background-color: #F4F4F5;
+    .about-title-skill {
+        margin: 1em 0 0.7em 0;
+    }
+    .about-profile img {
+        max-width: 30em;
+        height: auto;
+    }
+    .about-description {
+        font-size: 1.2em;
+    }
+    .about-skill {
+        .odd {
+            background-color: #F8F8F8;
+            width: 149px;
+            height: 149px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+            img {
+                max-width: 62px;
+            }
+        }
+        .even {
+            // background-color: #F8F8F8;
+            width: 149px;
+            height: 149px;
+            // box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+            img {
+                max-width: 62px;
+            }
+        }
+        .odd:hover {
+            img {
+                transform: scale(1.2);
+            }
+        }
+        .even:hover {
+            img {
+                transform: scale(1.2);
+            }
+        }
+    }
+    .modal {
+        img {
+            width: 1em;
+        }
+    }
+}
+
+.service {
+    .card {
+        border: 0;
+        height: 10rem;
+    }
+}
+
+.portofolio {
+    .portofolio-img {
+        width: 100%;
+    }
+}
+
+// TABLET
+@media (max-width: 991.98px) {
+    // NAVBAR
+    .navbar {
+        text-align: center !important;
+        .navbar-brand {
+            margin: 0 !important;
+        }
+        .nav-timezone {
+            text-align: center !important;
+            font-size: 0.8em !important;
+        }
+    }
+    // HOME
+    .home {
+        height: 30vh;
+        .home-header {
+            @include mixin.title(1.7em,
+            500);
+            margin-bottom: 0.6em;
+        }
+        .home-description {
+            @include mixin.description(0.7em,
+            $secondary-color)
+        }
+        .home-button-resume {
+            @include mixin.button('block',
+            120px,
+            0.8em);
+        }
+        .home-button-mywork {
+            @include mixin.button('inline',
+            120px,
+            0.8em);
+        }
+    }
+    .about {
+        font-size: 1.3em;
+        .about-profile img {
+            max-width: 14em;
+            height: auto;
+            margin-left: 0 !important;
+        }
+        .about-title {
+            padding-top: 1.7em;
+        }
+        .about-description {
+            font-size: 0.9em;
+        }
+        .about-skill {
+            .odd {
+                background-color: #F8F8F8;
+                width: 85px;
+                height: 85px;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+                img {
+                    max-width: 40px;
+                }
+            }
+            .even {
+                width: 85px;
+                height: 85px;
+                img {
+                    max-width: 40px;
+                }
+            }
+        }
+    }
+    .service {
+        .card {
+            height: 13rem;
+        }
+    }
+}
+
+// MOBILE
+@media (max-width: 767.98px) {
+    .navbar {
+        text-align: center !important;
+        .navbar-brand {
+            margin: 0 !important;
+        }
+        .nav-timezone {
+            text-align: center !important;
+        }
+    }
+    .home {
+        height: 65vh !important;
+        text-align: center;
+        .home-header {
+            @include mixin.title(2em,
+            500);
+            margin-bottom: 0.6em;
+        }
+        .home-description {
+            margin-bottom: 0.6em;
+        }
+        .home-button-resume {
+            @include mixin.button('block',
+            100px,
+            0.7em);
+        }
+        .home-button-mywork {
+            @include mixin.button('inline',
+            100px,
+            0.7em);
+        }
+    }
+    .about {
+        .about-description {
+            text-align: center;
+        }
+        .about-profile {
+            display: flex;
+            justify-content: center;
+            img {
+                margin-left: 3rem !important;
+            }
+        }
+        .about-title {
+            padding-top: 0;
+        }
+        .about-skill {
+            .odd {
+                background-color: #F8F8F8;
+                width: 120px;
+                height: 120px;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+                img {
+                    max-width: 40px;
+                }
+            }
+            .even {
+                width: 120px;
+                height: 120px;
+                img {
+                    max-width: 40px;
+                }
+            }
+            .last {
+                order: 6;
+            }
+        }
+    }
+    .service {
+        .card {
+            height: auto;
+        }
+    }
+}

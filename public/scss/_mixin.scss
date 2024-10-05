@@ -1,0 +1,30 @@
+// MIXIN
+$primary-color: #F4F4F5;
+$secondary-color: #656565;
+$tertiary-color:#F8F8F8;
+@mixin title($size, $weight) {
+    font-size: $size;
+    font-weight: $weight;
+}
+
+@mixin description($size, $color) {
+    font-size: $size;
+    color: $color;
+}
+
+@mixin button($type, $width, $font-size) {
+    margin: 5px;
+    width: $width;
+    font-size: $font-size;
+    @if $type=='block' {
+        background-color: $secondary-color;
+        color: $tertiary-color;
+        border-radius: 0;
+    }
+    @else {
+        background-color: $tertiary-color;
+        color: $secondary-color;
+        border-radius: 0;
+        border: 2px solid $secondary-color;
+    }
+}
