@@ -2,45 +2,35 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\ToolResource\Pages;
-use App\Filament\Resources\ToolResource\RelationManagers;
-use App\Models\Tool;
+use App\Filament\Resources\ResumeResource\Pages;
+use App\Filament\Resources\ResumeResource\RelationManagers;
+use App\Models\Resume;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Filament\Forms\Set;
+use Livewire\Features\SupportFileUploads\TemporaryUploadedFile;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class ToolResource extends Resource
+class ResumeResource extends Resource
 {
-    protected static ?string $model = Tool::class;
+    protected static ?string $model = Resume::class;
 
-    protected static ?string $navigationIcon = 'heroicon-m-squares-2x2';
+    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('name')
-                    ->afterStateUpdated(function (Set $set, $state) {
-                        $set('slug', Tool::generateUniqueSlug($state));
-                    })
-                    ->live(onBlur: true)
+                Forms\Components\FileUpload::make('resume')
                     ->required()
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('description')
-                    ->required()
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('slug')
-                    ->required()
-                    ->readOnly()
-                    ->maxLength(255),
-                Forms\Components\FileUpload::make('image')
-                    ->image()
-                    ->required(),
+                    ->downloadable()
+                    ->getUploadedFileNameForStorageUsing(
+                        fn(TemporaryUploadedFile $file): string => str_replace(' ', '_', $file->getClientOriginalName())
+                    )
+                    ->acceptedFileTypes(['application/pdf']),
             ]);
     }
 
@@ -48,13 +38,8 @@ class ToolResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name')
+                Tables\Columns\TextColumn::make('resume')
                     ->searchable(),
-                Tables\Columns\ImageColumn::make('image'),
-                Tables\Columns\TextColumn::make('description')
-                    ->searchable()
-                    ->wrap(),
-
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -87,9 +72,9 @@ class ToolResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListTools::route('/'),
-            'create' => Pages\CreateTool::route('/create'),
-            'edit' => Pages\EditTool::route('/{record}/edit'),
+            'index' => Pages\ListResumes::route('/'),
+            'create' => Pages\CreateResume::route('/create'),
+            'edit' => Pages\EditResume::route('/{record}/edit'),
         ];
     }
 }

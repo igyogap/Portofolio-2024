@@ -60,6 +60,13 @@ $tertiary-color:#F8F8F8;
         font-size: 1.2em;
     }
     .about-skill {
+        .about-skill-image {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 5px;
+            grid-auto-rows: auto;
+            justify-items: center;
+        }
         .odd {
             background-color: #F8F8F8;
             width: 149px;
